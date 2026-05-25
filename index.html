@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>洪博 | 个人成长档案</title>
+  <meta name="description" content="洪博的个人网站，展示大学生活、专业课程、校园活动、获奖证书、课外阅读与成长目标。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar container">
+      <a class="brand" href="#top">
+        <span class="brand-mark">HB</span>
+        <span class="brand-text">洪博 · Personal Web</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="切换导航">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">自我介绍</a>
+        <a href="#major">专业课程</a>
+        <a href="#activities">校园活动</a>
+        <a href="#roommates">室友</a>
+        <a href="#awards">奖项证书</a>
+        <a href="#reading">阅读推荐</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <article class="slide active">
+          <div class="slide-bg slide-campus"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <p class="eyebrow">HELLO, I AM HONGB0</p>
+            <h1>在代码、竞赛与校园热爱中持续成长</h1>
+            <p class="hero-text">
+              我是洪博，来自岭南师范学院软件工程专业。作为大一学生，我正在用项目、比赛、阅读和责任感，为未来的软件工程之路打下扎实基础。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#about">了解我</a>
+              <a class="button button-secondary" href="#reading">我的阅读清单</a>
+            </div>
+          </div>
+        </article>
+        <article class="slide">
+          <div class="slide-bg slide-code"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <p class="eyebrow">SOFTWARE ENGINEERING</p>
+            <h2>以技术为舟，朝着更强的工程能力前进</h2>
+            <p class="hero-text">
+              从课堂学习到学科竞赛，我关注的不只是“会写代码”，更是如何用逻辑、协作与实践把想法变成真正可用的成果。
+            </p>
+          </div>
+        </article>
+        <article class="slide">
+          <div class="slide-bg slide-books"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <p class="eyebrow">READING & THINKING</p>
+            <h2>阅读帮助我理解技术，也帮助我理解世界</h2>
+            <p class="hero-text">
+              人工智能、软件工程、哲学与历史类书籍，正在塑造我的学习方式、思维深度与长期视野。
+            </p>
+          </div>
+        </article>
+        <div class="slider-dots" id="sliderDots" aria-label="轮播切换"></div>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <div class="container stat-grid">
+        <article class="stat-card">
+          <span class="stat-number">01</span>
+          <h3>学校</h3>
+          <p>岭南师范学院</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">02</span>
+          <h3>专业</h3>
+          <p>软件工程</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">03</span>
+          <h3>角色</h3>
+          <p>宣传委员会会长、班长</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">04</span>
+          <h3>关键词</h3>
+          <p>竞赛、执行力、成长型思维</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-column">
+        <div class="section-heading">
+          <p class="section-kicker">About Me</p>
+          <h2>自我介绍</h2>
+          <p>
+            我叫洪博，是岭南师范学院软件工程专业的一名大一学生。我热爱编程、关注技术趋势，喜欢在比赛、阅读和团队实践中不断提升自己。
+          </p>
+        </div>
+        <div class="profile-card">
+          <div class="profile-badge">HONGB0</div>
+          <ul class="profile-list">
+            <li><strong>身份定位：</strong>软件工程新生 / 班级管理者 / 宣传骨干</li>
+            <li><strong>成长方向：</strong>软件开发、网络安全、AI 时代工程能力提升</li>
+            <li><strong>校园关键词：</strong>竞赛参与、团队协作、主动承担、持续学习</li>
+            <li><strong>个人态度：</strong>保持积极向上，以行动积累实力，用热爱驱动成长</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section accent-section" id="college">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="section-kicker">My University</p>
+          <h2>我的大学</h2>
+          <p>
+            岭南师范学院为我提供了良好的学习环境和丰富的校园实践舞台。在这里，我不仅学习专业知识，也在运动、竞赛和班级事务中锻炼了沟通协作与组织能力。
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>学习氛围</h3>
+            <p>课堂与实践并重，帮助我把理论知识和项目思维联系起来。</p>
+          </article>
+          <article class="feature-card">
+            <h3>校园生活</h3>
+            <p>篮球、足球、社团与竞赛构成了我充实且有节奏的大学日常。</p>
+          </article>
+          <article class="feature-card">
+            <h3>成长空间</h3>
+            <p>从大一开始主动承担班级和组织工作，让我更快建立责任意识与执行力。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="major">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Major & Courses</p>
+          <h2>专业及课程</h2>
+          <p>
+            软件工程是一门强调逻辑、规范、协作与实践的专业。我希望通过系统学习，逐步成长为具备工程意识、开发能力和创新思维的软件人才。
+          </p>
+        </div>
+        <div class="course-layout">
+          <article class="course-panel">
+            <h3>专业认知</h3>
+            <p>
+              软件工程不仅是编写程序，更是围绕需求分析、系统设计、编码实现、测试维护展开的完整工程过程。我正在建立扎实的基础，持续提升解决问题的能力。
+            </p>
+          </article>
+          <article class="course-panel">
+            <h3>重点课程</h3>
+            <ul class="tag-list">
+              <li>C 语言程序设计</li>
+              <li>数据结构基础</li>
+              <li>面向对象程序设计</li>
+              <li>计算机网络</li>
+              <li>数据库原理</li>
+              <li>软件工程导论</li>
+              <li>Web 前端基础</li>
+              <li>离散数学</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="activities">
+      <div class="container">
+        <div class="section-heading narrow light">
+          <p class="section-kicker">Campus Activities</p>
+          <h2>校园活动</h2>
+          <p>
+            我积极参与体育赛事和专业竞赛，希望在不同类型的挑战中提升体能、思维与团队配合能力。
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-mark"></span>
+            <div class="timeline-content">
+              <h3>体育活动</h3>
+              <p>参加篮球、足球比赛，在合作与拼搏中培养集体荣誉感与临场应变能力。</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-mark"></span>
+            <div class="timeline-content">
+              <h3>技术竞赛</h3>
+              <p>参与蓝桥杯、大学生软件创新大赛、大学生创新创业大赛、大学生数学竞赛，持续锻炼算法思维与项目表达能力。</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-mark"></span>
+            <div class="timeline-content">
+              <h3>班级与组织工作</h3>
+              <p>担任宣传委员会会长和班长，在组织事务、沟通协调和执行落地中积累管理经验。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roommates">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">My Roommates</p>
+          <h2>室友风采</h2>
+          <p>
+            宿舍是一个很特别的小团队。大家方向不同，却都在各自的技术道路上不断前进，也让我在交流中获得很多启发。
+          </p>
+        </div>
+        <div class="roommate-grid">
+          <article class="roommate-card">
+            <h3>室友 1</h3>
+            <p>CTF 红队队员，擅长安全攻防方向，带给我很多关于网络安全实战的启发。</p>
+          </article>
+          <article class="roommate-card">
+            <h3>室友 2</h3>
+            <p>后端开发工程师方向，关注服务端架构与接口设计，是我理解系统逻辑的重要伙伴。</p>
+          </article>
+          <article class="roommate-card">
+            <h3>室友 3</h3>
+            <p>全栈开发工程师方向，兼顾前端与后端能力，让我更加理解完整项目的开发流程。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section accent-section" id="club">
+      <div class="container two-column">
+        <div class="section-heading">
+          <p class="section-kicker">Club Experience</p>
+          <h2>社团与学生工作经历</h2>
+          <p>
+            在校园中，我不仅关注专业学习，也积极承担公共事务。学生工作让我学会站在集体角度思考问题，并提升了策划、宣传与协作能力。
+          </p>
+        </div>
+        <div class="highlight-box">
+          <h3>我的角色</h3>
+          <p>宣传委员会会长</p>
+          <p>班长</p>
+          <h3>我的收获</h3>
+          <p>更强的责任感、组织能力、表达能力，以及把想法转化为实际执行成果的能力。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Awards & Certificates</p>
+          <h2>获得奖项与证书</h2>
+          <p>
+            每一份成绩都是阶段性的肯定，也提醒我继续保持热情和专注，向更高目标迈进。
+          </p>
+        </div>
+        <div class="awards-grid">
+          <article class="award-card">
+            <span class="award-type">竞赛奖项</span>
+            <h3>腾科 &amp; 360 网络攻防训练营比赛二等奖</h3>
+            <p>在网络攻防训练与实战能力方面取得了重要的阶段性成果。</p>
+          </article>
+          <article class="award-card">
+            <span class="award-type">省级奖项</span>
+            <h3>大学生创新创业大赛广东省三等奖</h3>
+            <p>体现了项目思维、创新意识和团队合作能力的综合提升。</p>
+          </article>
+          <article class="award-card">
+            <span class="award-type">语言证书</span>
+            <h3>CET-4 / CET-6</h3>
+            <p>英语能力是连接更广阔技术世界的重要工具，也为后续阅读英文资料打下基础。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reading-section" id="reading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Books & Articles</p>
+          <h2>课外阅读与推荐文章</h2>
+          <p>
+            阅读让我在技术之外保持思考，也帮助我更系统地理解软件工程、人工智能与人文世界之间的联系。
+          </p>
+        </div>
+        <div class="reading-layout">
+          <article class="book-shelf">
+            <h3>我的课外阅读</h3>
+            <div class="book-grid">
+              <div class="book-card">《人工智能极简入门》</div>
+              <div class="book-card">《代码整洁之道》</div>
+              <div class="book-card">《机器学习实战：基于 Scikit-Learn 和 TensorFlow》</div>
+              <div class="book-card">《苏菲的世界》</div>
+              <div class="book-card">《沉思录》</div>
+              <div class="book-card">《人类简史》</div>
+            </div>
+          </article>
+          <article class="article-panel">
+            <h3>推荐文章</h3>
+            <div class="article-list">
+              <article class="article-card">
+                <h4>《AI时代，软件工程的核心能力是什么？》</h4>
+                <p>关注未来开发者在工具升级背景下，更重要的抽象、设计、协作与交付能力。</p>
+              </article>
+              <article class="article-card">
+                <h4>《从入门到深耕：AI编程的高效学习路径》</h4>
+                <p>帮助我思考如何把 AI 工具真正转化为学习效率和项目能力上的提升。</p>
+              </article>
+              <article class="article-card">
+                <h4>《代码思维：逻辑、迭代与极致优化》</h4>
+                <p>提醒我在编程中建立结构化思维，追求可维护、可迭代、可扩展的代码质量。</p>
+              </article>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h3>洪博 · 个人成长档案</h3>
+        <p>以青春为底色，以奋斗为笔触，记录大学阶段的成长与热爱。</p>
+      </div>
+      <a class="back-top" href="#top">回到顶部</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
