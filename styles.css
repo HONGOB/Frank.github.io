@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Outfit", "Microsoft YaHei", sans-serif;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(196, 107, 45, 0.12), transparent 32%),
@@ -175,15 +175,30 @@ ul {
 }
 
 .slide-campus {
-  background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
+  background: 
+    linear-gradient(135deg, rgba(26, 58, 74, 0.88) 0%, rgba(13, 40, 53, 0.93) 50%, rgba(22, 69, 92, 0.89) 100%),
+    url('covers/campus-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 .slide-code {
-  background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80");
+  background: 
+    linear-gradient(135deg, rgba(30, 58, 95, 0.85) 0%, rgba(15, 37, 64, 0.92) 50%, rgba(26, 74, 110, 0.88) 100%),
+    url('covers/code-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 .slide-books {
-  background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80");
+  background: 
+    linear-gradient(135deg, rgba(45, 27, 78, 0.86) 0%, rgba(26, 15, 53, 0.92) 50%, rgba(61, 42, 107, 0.87) 100%),
+    url('covers/books-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 .slide-overlay {
@@ -287,6 +302,43 @@ ul {
 .slider-dot.active {
   background: #fff;
   transform: scale(1.18);
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.slider-nav:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.slider-nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+.slider-nav-prev {
+  left: 1.5rem;
+}
+
+.slider-nav-next {
+  right: 1.5rem;
 }
 
 .intro-strip {
@@ -540,8 +592,8 @@ ul {
 .highlight-box {
   padding: 2rem;
   background:
-    linear-gradient(180deg, rgba(24, 74, 99, 0.95), rgba(18, 50, 68, 0.95)),
-    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80") center/cover;
+    linear-gradient(180deg, rgba(24, 74, 99, 0.98), rgba(18, 50, 68, 0.98)),
+    radial-gradient(circle at top right, rgba(223, 139, 66, 0.25), transparent 50%);
   color: #fff;
 }
 
@@ -584,32 +636,84 @@ ul {
 }
 
 .book-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
 
 .book-card {
-  min-height: 108px;
-  padding: 1.1rem;
-  border-radius: 20px;
   display: flex;
-  align-items: flex-end;
-  color: #fff;
-  font-family: "Noto Serif SC", "Microsoft YaHei", serif;
-  line-height: 1.6;
-  background:
-    linear-gradient(160deg, rgba(16, 33, 45, 0.86), rgba(27, 78, 105, 0.86)),
-    radial-gradient(circle at top left, rgba(223, 139, 66, 0.35), transparent 30%);
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(196, 107, 45, 0.15);
+}
+
+.book-card .book-cover {
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.book-card .book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.book-card .book-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.book-card .book-info {
+  padding: 1rem;
+  font-family: "Microsoft YaHei", "PingFang SC", serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+  text-align: center;
+  background: var(--surface);
 }
 
 .article-card {
   padding: 1.15rem 1.2rem;
   border-radius: 18px;
   background: var(--surface-strong);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(196, 107, 45, 0.15);
+}
+
+.article-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .article-card h4 {
   margin: 0 0 0.6rem;
   font-size: 1rem;
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+.article-card:hover h4 {
+  color: var(--primary);
 }
 
 .site-footer {

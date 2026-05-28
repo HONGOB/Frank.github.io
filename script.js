@@ -3,6 +3,7 @@
   var dotsContainer = document.getElementById("sliderDots");
   var navToggle = document.getElementById("navToggle");
   var navLinks = document.getElementById("navLinks");
+  var slider = document.getElementById("heroSlider");
   var currentIndex = 0;
   var sliderTimer = null;
 
@@ -18,6 +19,32 @@
       });
       dotsContainer.appendChild(button);
     });
+  }
+
+  function createNavButtons() {
+    var prevButton = document.createElement("button");
+    prevButton.type = "button";
+    prevButton.className = "slider-nav slider-nav-prev";
+    prevButton.setAttribute("aria-label", "上一张幻灯片");
+    prevButton.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>';
+    prevButton.addEventListener("click", function () {
+      var prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
+      restartAutoplay();
+    });
+
+    var nextButton = document.createElement("button");
+    nextButton.type = "button";
+    nextButton.className = "slider-nav slider-nav-next";
+    nextButton.setAttribute("aria-label", "下一张幻灯片");
+    nextButton.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>';
+    nextButton.addEventListener("click", function () {
+      nextSlide();
+      restartAutoplay();
+    });
+
+    slider.appendChild(prevButton);
+    slider.appendChild(nextButton);
   }
 
   function showSlide(index) {
@@ -62,6 +89,20 @@
     });
   }
 
+  function setupBackToTop() {
+    var backTopBtn = document.querySelector(".back-top");
+    if (!backTopBtn) {
+      return;
+    }
+    backTopBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+
   function setupReveal() {
     var elements = document.querySelectorAll(".section, .stat-card");
 
@@ -91,9 +132,11 @@
 
   if (slides.length && dotsContainer) {
     createDots();
+    createNavButtons();
     startAutoplay();
   }
 
   setupMenu();
   setupReveal();
+  setupBackToTop();
 })();
